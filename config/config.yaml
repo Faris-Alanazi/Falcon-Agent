@@ -1,0 +1,57 @@
+# Falcon Agent Configuration
+
+# AI Model settings
+ai:
+  model: "qwen3:8b"  # Default model
+
+# CrewAI settings
+crewai:
+  sequential: true  # Run agents sequentially (true) or in parallel (false)
+
+# Logging settings
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# File System settings
+file_system:
+  base_dir: "data"
+  lock_timeout: 30  # Seconds
+
+# Memory settings
+memory:
+  short_term_capacity: 100
+  long_term_enabled: true
+
+# Agent settings
+agents:
+  max_concurrent_tasks: 2
+
+# Web Interface settings
+web:
+  enabled: true
+  port: 5000
+  host: "0.0.0.0"
+
+# Ollama integration
+ollama:
+  enabled: true
+  model: "qwen3:8b"
+  server_url: "http://localhost:11434"
+
+# MCP settings
+mcp:
+  enabled: true
+  
+  # Brave Search MCP
+  brave_search:
+    enabled: true
+    api_key: ""  # Add your API key here or in environment variables
+  
+  # Sequential Thinking MCP
+  sequential_thinking:
+    enabled: true
+  
+  # Context7 MCP for documentation access
+  context7:
+    enabled: true 
